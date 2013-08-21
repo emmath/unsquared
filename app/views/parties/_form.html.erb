@@ -1,0 +1,39 @@
+<%= form_for(@party) do |f| %>
+  <p>
+    <%= f.label :event_name, "Name" %>
+    <%= f.text_field :event_name %>
+  </p>
+
+  <p>
+    <%= f.label :event_description, "Description" %>
+    <%= f.text_field :event_description %>
+  </p>
+
+  <p>
+    <%= f.label :event_date, "Date" %>
+    <%= f.datetime_select :event_date, :prompt => {:day => 'Choose day', :month => 'Choose month', :year => 'Choose year'}, :order => [:day, :month, :year] %>
+  </p>
+
+  <p>
+    <%= f.label :venue %>
+    <%= f.text_field :venue %>
+  </p>
+
+  <p>
+    <%= f.label :host %>
+    <%= f.text_field :host %>
+  </p>
+
+  <p>
+    <%= f.label :hashtag %>
+    <%= f.text_field :hashtag %>
+  </p>
+
+  <p>
+    <%= f.label :notes %>
+    <%= f.text_area :notes %>
+  </p>
+
+
+  <%= f.submit "Create Party" %>
+<% end %>
