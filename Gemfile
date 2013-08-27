@@ -7,8 +7,9 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 gem 'formtastic'
+gem 'figaro'
 
-
+gem 'httparty'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -23,10 +24,13 @@ end
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.11'
+  gem "vcr", "~> 2.5.0"
+
 end
 
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'factory_girl', '2.6.4'
 end
 
 gem 'jquery-rails'
