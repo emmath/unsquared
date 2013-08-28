@@ -9,6 +9,11 @@ gem 'pg'
 gem 'sqlite3'
 gem 'formtastic'
 gem 'figaro'
+gem 'rmagick'
+gem 'carrierwave'
+gem 'fog'
+gem 'carrierwave_direct'
+gem 'sidekiq'
 
 gem 'httparty'
 # Gems used only for assets and not required

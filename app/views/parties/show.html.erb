@@ -1,5 +1,7 @@
 <h2><%= @party.event_name %></h2>
 
+<p><%= image_tag @party.image_url(:thumb).to_s %></p>
+
 <%= link_to "Edit Party", edit_party_path(@party) %>
 
 <h2>Hashtag Vision</h2>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130827212510) do
+ActiveRecord::Schema.define(:version => 20130828010427) do
 
   create_table "parties", :force => true do |t|
     t.string   "event_name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20130827212510) do
     t.text     "notes"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "image"
   end
 
   create_table "photos", :force => true do |t|
