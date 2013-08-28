@@ -18,7 +18,8 @@
 
 
 </head>
-<body>
+<% body_class = @show_background.present? ? "homepage" : "" %>
+<body class = "<%= body_class %>">
 
   <div>
     <% if current_user %>

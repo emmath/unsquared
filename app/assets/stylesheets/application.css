@@ -18,3 +18,11 @@
 
 /* Paragraph Fonts */
 /* font-family: 'Droid Serif', serif; */
+
+body {background-color:#A9E2F3;}
+
+.homepage {
+  background:url('/assets/weddingreception.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
