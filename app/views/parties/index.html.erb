@@ -8,7 +8,7 @@
 
   <% @parties.each do |party| %>
     <tr>
-      <td><%= party.event_name %></td>
+      <td><%= link_to party.event_name, party %></td>
       <td><%= image_tag party.image_url(:thumb).to_s %></td>
     </tr>
   <% end %>
