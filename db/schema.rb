@@ -13,12 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130828010427) do
 
-  create_table "instagrams", :force => true do |t|
-    t.string   "tag"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "parties", :force => true do |t|
     t.string   "event_name"
     t.datetime "event_date"

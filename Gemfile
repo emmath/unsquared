@@ -15,7 +15,6 @@ gem 'carrierwave'
 gem 'fog'
 gem 'carrierwave_direct'
 gem 'sidekiq'
-
 gem 'httparty'
 # Gems used only for assets and not required
 # in production environments by default.
@@ -32,13 +31,13 @@ end
 group :test, :development do
   gem 'rspec-rails', '~> 2.11'
   gem "vcr", "~> 2.5.0"
-  gem 'sqlite3'
 
 end
 
 group :test do
   gem 'capybara', '1.1.2'
   gem 'factory_girl', '2.6.4'
+  gem 'webmock'
 end
 
 gem 'jquery-rails'
