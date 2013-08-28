@@ -18,7 +18,17 @@
 
 
 </head>
+
 <body>
+
+  <div>
+    <% if current_user %>
+      Signed in as <strong><%= current_user.name %></strong>
+      <%= link_to "Sign out", signout_path, id: "sign_out" %>
+    <% else %>
+      <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+    <% end %>
+  </div>
 
   <% flash.each do |key, value| %>
     <div class='flash' id='<%= key %>'>
@@ -28,5 +38,25 @@
 
   <%= yield %>
 
+  <script>
+    $(document).ready(function() {
+      var images = ['bartable.jpg', 'concert.jpg', 'lightning.jpg', 'pub.jpg', 'reception.jpg', 'weddingreception.jpg'];
+      $('body').css({'background-image': 'url(assets/' + images[Math.floor(Math.random() * images.length)] + ')', 'background-size': 'cover'});
+    })
+  </script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

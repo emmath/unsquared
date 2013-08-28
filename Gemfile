@@ -15,6 +15,9 @@ gem 'carrierwave'
 gem 'fog'
 gem 'carrierwave_direct'
 gem 'sidekiq'
+
+gem 'omniauth-facebook'
+
 gem 'httparty'
 # Gems used only for assets and not required
 # in production environments by default.

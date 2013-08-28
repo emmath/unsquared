@@ -2,6 +2,7 @@ class PartiesController < ApplicationController
 
   def index
     @parties = Party.all
+    @show_background = "home"
   end
 
   def new
@@ -9,7 +10,7 @@ class PartiesController < ApplicationController
   end
 
   def create
-    @party = Party.new(params[:party])
+    @party = Party.create(params[:party])
     if @party.save
       flash[:notice] = "Woohoo! Your party has been created!"
       redirect_to @party
