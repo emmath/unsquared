@@ -1,3 +1,17 @@
 <h2>Party List</h2>
 
+<table>
+  <tr>
+    <th>Party Name</th>
+    <th>Party Photo</th>
+  </tr>
+
+  <% @parties.each do |party| %>
+    <tr>
+      <td><%= party.event_name %></td>
+      <td><%= image_tag party.image_url(:thumb).to_s %></td>
+    </tr>
+  <% end %>
+</table>
+
 <%= link_to "New Party", new_party_path %>
