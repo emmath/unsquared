@@ -31,15 +31,16 @@
 
   <p>
     <%= f.label :notes %>
-    <%= f.text_area :notes %>
+    <%= f.text_area :notes, :size => 5 %>
   </p>
 
   <p>
+    <%= f.label :image %>
     <%= f.file_field :image %>
   </p>
 
+    <%= f.submit "Create Party", :class => "btn btn-success btn-lg" %>
 
-  <%= f.submit "Create Party" %>
 <% end %>
 
 
