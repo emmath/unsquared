@@ -18,8 +18,8 @@
 
 
 </head>
-<% body_class = @show_background.present? ? "homepage" : "" %>
-<body class = "<%= body_class %>">
+
+<body>
 
   <div>
     <% if current_user %>
@@ -38,5 +38,25 @@
 
   <%= yield %>
 
+  <script>
+    $(document).ready(function() {
+      var images = ['bartable.jpg', 'concert.jpg', 'lightning.jpg', 'pub.jpg', 'reception.jpg', 'weddingreception.jpg'];
+      $('body').css({'background-image': 'url(assets/' + images[Math.floor(Math.random() * images.length)] + ')', 'background-size': 'cover'});
+    })
+  </script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
