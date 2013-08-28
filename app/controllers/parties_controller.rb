@@ -14,7 +14,8 @@ class PartiesController < ApplicationController
       flash[:notice] = "Party has been created."
       redirect_to @party
     else
-      #TBD
+      flash[:alert] = "Party has not been created"
+      render :action => "new"
     end
   end
 

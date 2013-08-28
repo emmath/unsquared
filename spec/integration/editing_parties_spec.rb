@@ -15,7 +15,7 @@ feature "Editing Parties" do
   end
 
   scenario "Updating a party with invalid attributes is wrong" do
-    fill_in "Notes", with: ""
+    fill_in "Notes", with: " "
     click_button "Update Party"
     page.should have_content("Party has not been updated.")
   end

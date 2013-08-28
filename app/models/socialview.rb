@@ -1,5 +1,6 @@
 class Socialview < ActiveRecord::Base
   attr_accessible :tag
+  validates :tag, presence: true
   belongs_to :party
   include HTTParty
 

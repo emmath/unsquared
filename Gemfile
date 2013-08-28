@@ -2,9 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
+gem 'dynamic_form', '1.1.4'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'pg'
 gem 'sqlite3'
 gem 'formtastic'
@@ -31,6 +32,7 @@ end
 group :test, :development do
   gem 'rspec-rails', '~> 2.11'
   gem "vcr", "~> 2.5.0"
+  gem 'sqlite3'
 
 end
 

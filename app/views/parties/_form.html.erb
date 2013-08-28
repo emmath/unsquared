@@ -1,4 +1,5 @@
 <%= form_for(@party) do |f| %>
+  <%= f.error_messages %>
   <p>
     <%= f.label :event_name, "Name" %>
     <%= f.text_field :event_name %>
