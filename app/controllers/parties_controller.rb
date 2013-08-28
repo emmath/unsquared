@@ -9,7 +9,7 @@ class PartiesController < ApplicationController
   end
 
   def create
-    @party = Party.new(params[:party])
+    @party = Party.create(params[:party])
     if @party.save
       flash[:notice] = "Party has been created."
       redirect_to @party
