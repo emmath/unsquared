@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :party do
-    name "Example Party"
+    event_name "Example Party"
   end
 end

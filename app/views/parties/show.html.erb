@@ -2,7 +2,11 @@
 
 <p><%= image_tag @party.image_url(:thumb).to_s %></p>
 
-<%= link_to "Edit Party", edit_party_path(@party) %>
+<%= link_to "Edit Party", edit_party_path(@party) %> |
+<%= link_to "Delete Party",
+     party_path(@party),
+     :method => :delete,
+     :confirm => "Hold up! Are you sure you want to delete your party?" %>
 
 <h2>Hashtag Vision</h2>
 

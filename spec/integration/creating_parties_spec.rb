@@ -10,12 +10,12 @@ feature 'Creating Parties' do
     fill_in 'Name', :with => 'Demo Day'
     fill_in 'Notes', :with => 'Dress to impress'
     click_button 'Create Party'
-    page.should have_content('Party has been created.')
+    page.should have_content("Woohoo! Your party has been created!")
   end
 
   scenario "can not create a party without a name" do
     click_button 'Create Party'
-    page.should have_content("Party has not been created")
-    page.should have_content("Name can't be blank")
+    page.should have_content("Whoops, party has not been created.")
+    page.should have_content("Event name can't be blank")
   end
 end
