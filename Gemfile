@@ -17,6 +17,7 @@ gem 'carrierwave_direct'
 gem 'sidekiq'
 
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 gem "tweet-button"
 
