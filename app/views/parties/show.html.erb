@@ -57,12 +57,14 @@
       <p><i class="icon-calendar"></i>      <%= @party.event_date %></p>
       <p><i class="icon-map-marker"></i>       <%= @party.venue %></p>
       <p><i class="icon-ok"></i>    <%= @party.hashtag %></p>
+      <h6><%= link_to "Edit Party", edit_party_path(@party) %></h6>
 
     </div>
 
     <div class="rsvp">
       <div class="col-md-6">
         <h3>RSVP</h3>
+        <%= render partial: 'socialform', locals: {socialview: Socialview.new} %>
       </div>
     </div><!-- googlemap -->
   </div><!-- event-logistics -->
@@ -76,9 +78,14 @@
   </div>
 
   <div class="googlemap">
-  </div>
+    <div class="col-md-6">
+      Google Map
+    </div>
 
-<%= link_to "Edit Party", edit_party_path(@party) %>
+    <div class="col-md-6">
+      Google Map Directions
+    </div>
+  </div>
 
 </div>
 

@@ -40,10 +40,13 @@
   <%= yield %>
 
   <script>
+  if (window.location.pathname == '/')
+  {
     $(document).ready(function() {
       var images = ['bartable.jpg', 'concert.jpg', 'lightning.jpg', 'pub.jpg', 'reception.jpg', 'weddingreception.jpg'];
       $('body').css({'background-image': 'url(assets/' + images[Math.floor(Math.random() * images.length)] + ')', 'background-size': 'cover'});
     })
+  }
   </script>
 
 
