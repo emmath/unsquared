@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  attr_accessible :rsvp_id
+
   has_many :rsvps
   has_many :parties, :through => :rsvps
 
