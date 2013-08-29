@@ -1,11 +1,10 @@
 <%= form_for socialview do |f| %>
   <p>
-    <%= f.label :tag %>
-    <%= f.text_field :tag %>
+    <%= f.text_field :tag, :placeholder => "#hashtag" %>
   </p>
 
    <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Let's Hashtag This!", :class => "btn btn-success btn-lg" %>
   </div>
 
 <% end %>

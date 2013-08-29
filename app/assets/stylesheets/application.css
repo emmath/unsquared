@@ -14,6 +14,22 @@
  */
 
 
+/* Colour Scheme One */
+/* Light Orange: #fcd6a7; */
+/* Medium Orange: #fcbe58; */
+/* Dark Orange: #e38839; */
+/* Blue: #87c4bb; */
+/* Grey: #998a76; */
+
+
+/* Colour Scheme Two */
+/* Orange: #ff7759; */
+/* Pink: #c74965; */
+/* Purple: #7a387f; */
+/* Light Green: #5eeb70; */
+/* Dark Green: #07b58d; */
+
+
 /* Fonts */
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,6 +44,7 @@ p {
 }
 
 /* Creating a New Party Form Page */
+
 .new-party .jumbotron {
   width: 450px;
   opacity: .85;
@@ -59,14 +76,256 @@ p {
   margin-top: 30px;
 }
 
+.new-party body {
+  background-color: #eee;
+}
+
+
+
+/* Party Logistics Page */
+
+
+.event-details .header-image {
+  height: 400px;
+  /*background-image: url(image_path('concert.jpg'));*/
+}
+
+.event-logistics .col-md-6 {
+  height: 350px;
+  padding-left: 50px;
+}
+
+.event-logistics h3 {
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+  color: #ff7759;
+}
+
+.event-logistics h4 {
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+}
+
+.rsvp h3 {
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+  color: #07b58d;
+}
+
+
+.hashtag {
+  clear: both;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.hashtag h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400px;
+  line-height: 1.2em;
+}
+
+.hashtag .btn {
+  margin-top: 30px;
+}
+
+.hashtag input {
+  width: 390px;
+  margin-top: 20px;
+}
 
 
 
 
 
 
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
 
 
+
+
+
+
+/********* LOOK AT DELETING **********/
+
+
+/* Part of Isotope jQuery */
+
+/**** Isotope Filtering ****/
+
+.isotope-item img {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.event-details {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400px;
+}
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope img {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item img {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition img {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+.element {
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #888;
+  color: #222;
+  -webkit-border-top-right-radius: 1.2em;
+      -moz-border-radius-topright: 1.2em;
+          border-top-right-radius: 1.2em;
+}
+
+
+/* Colour Scheme Two */
+/* Orange: #ff7759; */
+/* Pink: #c74965; */
+/* Purple: #7a387f; */
+/* Light Green: #5eeb70; */
+/* Dark Green: #07b58d; */
+
+.element.light-orange     { background: #ff7759; }
+.element.medium-orange    { background: #c74965; }
+.element.dark-orange      { background: #7a387f; }
+.element.blue             { background: #5eeb70; }
+.element.grey             { background: #07b58d; }
+
+.element * {
+  position: absolute;
+  margin: 0;
+}
+
+.element .symbol {
+  left: 0.2em;
+  top: 0.4em;
+  font-size: 3.8em;
+  line-height: 1.0em;
+  color: #FFF;
+}
+.element.large .symbol {
+  font-size: 4.5em;
+}
+
+.element.fake .symbol {
+  color: #000;
+}
+
+.element .name {
+  left: 0.5em;
+  bottom: 1.6em;
+  font-size: 1.05em;
+}
+
+.element .weight {
+  font-size: 0.9em;
+  left: 0.5em;
+  bottom: 0.5em;
+}
+
+.element .number {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: hsla(0,0%,0%,.5);
+  right: 0.5em;
+  top: 0.5em;
+}
+
+.variable-sizes .element.width2 { width: 200px; }
+
+.variable-sizes .element.height2 { height: 200px; }
+
+.variable-sizes .element.width2.height2 {
+  font-size: 2.0em;
+}
+
+.element.large,
+.variable-sizes .element.large,
+.variable-sizes .element.large.width2.height2 {
+  font-size: 3.0em;
+  width: 250px;
+  height: 250px;
+  z-index: 100;
+}
+
+.square-one {
+  margin-left: 150px;
+}
+
+.square-two {
+  margin-left: -50px;
+  margin-top: 100px;
+}
+
+.square-three {
+  margin-left: -370px;
+  margin-top: 270px;
+}
+
+
+.spacebox {
+  height: 400px;
+}
 
 
 

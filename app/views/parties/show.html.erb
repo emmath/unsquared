@@ -1,9 +1,87 @@
-<h2><%= @party.event_name %></h2>
 
-<p><%= image_tag @party.image_url(:thumb).to_s %></p>
+<div class="event-details">
+  <div class="header-image">
+
+  </div>
+
+<!--
+  <div id="spacebox" class="variable-sizes clearfix isotope">
+    <div class="isotope-item">
+
+      <div class="square-one element light-orange width2 height2"> 1
+      </div>
+
+      <div class="square-two element dark-orange width2 height2">
+        <h3 class="event-name">2 Name</h3>
+      </div>
+
+      <div class="square-three element blue width2 height2">
+        <h3 class="event-venue">3 Venue</h3>
+      </div>
+
+      <div class="square-four element grey width2 height2">
+        4
+      </div>
+
+      <div class="square-five element light-orange height2">
+        5
+      </div>
+
+      <div class="square-six element medium-orange">
+        6
+      </div>
+
+      <div class="square-seven element dark-orange">
+        7
+      </div>
+
+      <div class="square-eight element blue">
+        8
+      </div>
+
+      <div class="square-nine element grey">
+        9
+      </div>
+
+
+    </div>-->
+  <!-- </div>spacebox -->
+
+
+  <div class="event-logistics">
+    <div class="col-md-6">
+
+      <h3><%= @party.event_name %></h3>
+      <p>Hosted by <%= @party.host %></p>
+      <p><%= @party.event_description %></p>
+      <p><i class="icon-calendar"></i>      <%= @party.event_date %></p>
+      <p><i class="icon-map-marker"></i>       <%= @party.venue %></p>
+      <p><i class="icon-ok"></i>    <%= @party.hashtag %></p>
+
+    </div>
+
+    <div class="rsvp">
+      <div class="col-md-6">
+        <h3>RSVP</h3>
+      </div>
+    </div><!-- googlemap -->
+  </div><!-- event-logistics -->
+
+  <div class="col-md-12 hashtag">
+    <h3>Did you attend the event?</h3>
+    <h3>Put in a hashtag to see all the Instagram photos that were taken!</h3>
+
+    <%= render partial: 'socialform', locals: {socialview: Socialview.new} %>
+
+  </div>
+
+  <div class="googlemap">
+  </div>
 
 <%= link_to "Edit Party", edit_party_path(@party) %>
 
-<h2>Hashtag Vision</h2>
+</div>
 
-<%= render partial: 'socialform', locals: {socialview: Socialview.new} %>
+
+
+

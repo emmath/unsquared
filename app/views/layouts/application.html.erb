@@ -3,13 +3,17 @@
 <head>
   <title>Unsquared</title>
 
-    <!-- Twitter Bootstrap -->
+  <!-- Twitter Bootstrap CSS -->
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <!-- Font Awesome -->
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 
   <!-- Header Google Web Fonts -->
@@ -20,7 +24,7 @@
 
 
 </head>
-
+<% body_class = @show_background.present? ? "header-image" : "" %>
 <body>
 
   <div>
@@ -46,6 +50,9 @@
       $('body').css({'background-image': 'url(assets/' + images[Math.floor(Math.random() * images.length)] + ')', 'background-size': 'cover'});
     })
   </script>
+
+
+
 
 </body>
 </html>
