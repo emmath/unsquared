@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130829015057) do
+ActiveRecord::Schema.define(:version => 20130829200331) do
 
   create_table "parties", :force => true do |t|
     t.string   "event_name"
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(:version => 20130829015057) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
-    t.string   "image"
     t.integer  "rsvp_id"
   end
 

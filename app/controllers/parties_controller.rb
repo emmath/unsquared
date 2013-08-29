@@ -2,7 +2,6 @@ class PartiesController < ApplicationController
 
   def index
     @parties = Party.all
-    @show_background = "home"
   end
 
   def new
