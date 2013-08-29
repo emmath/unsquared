@@ -2,6 +2,9 @@
 
 <p><%= image_tag @party.image_url(:thumb).to_s %></p>
 
+<h3><%= @party.event_name %> is going to be AMAZING. Share it! </h3>
+<%= tweet_button(:via => "codefellowsorg", :text => "Ask me about the awesome event I just joined!") %>
+
 <%= link_to "Edit Party", edit_party_path(@party) %> |
 <%= link_to "Delete Party",
      party_path(@party),

@@ -201,6 +201,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    tweet-button (0.1.0)
     tzinfo (0.3.37)
     uglifier (2.1.2)
       execjs (>= 0.3.0)
@@ -237,6 +238,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sidekiq
   sqlite3
+  tweet-button
   uglifier (>= 1.0.3)
   vcr (~> 2.5.0)
   webmock
