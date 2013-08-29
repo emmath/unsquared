@@ -1,0 +1,17 @@
+<%= form_for rsvp do |rsvp| %>
+  <p>
+    <%= current_user.name %>
+  </p>
+
+  <p>
+    <%= rsvp.label :guests, 'Number of Guests' %>
+    <%= rsvp.select :guests, (1..6) %>
+  </p>
+
+  <div class="actions">
+    <%= rsvp.submit "Count me in!", :class => "btn btn-success btn-md" %>
+  </div>
+<% end %>
+
+
+

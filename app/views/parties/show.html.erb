@@ -4,6 +4,53 @@
 
   </div>
 
+  <div class="event-logistics">
+    <div class="col-md-6">
+
+      <h3><%= @party.event_name %></h3>
+      <p>Hosted by <%= @party.host %></p>
+      <p><%= @party.event_description %></p>
+      <p><i class="icon-calendar"></i>      <%= @party.event_date %></p>
+      <p><i class="icon-map-marker"></i>       <%= @party.venue %></p>
+      <p><i class="icon-ok"></i>    <%= @party.hashtag %></p>
+      <h6><%= link_to "Edit Party", edit_party_path(@party) %></h6>
+
+    </div>
+
+    <div class="rsvp">
+      <div class="col-md-6">
+        <h3>RSVP</h3>
+        <%= render partial: 'rsvpform', locals: {rsvp: Rsvp.new} %>
+      </div>
+    </div><!-- googlemap -->
+  </div><!-- event-logistics -->
+
+  <div class="col-md-12 hashtag">
+    <h3>Did you attend the event?</h3>
+    <h3>Put in a hashtag to see all the Instagram photos that were taken!</h3>
+
+    <%= render partial: 'socialform', locals: {socialview: Socialview.new} %>
+
+  </div>
+
+  <div class="googlemap">
+    <div class="col-md-6">
+      Google Map
+    </div>
+
+    <div class="col-md-6">
+      Google Map Directions
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- Look at deleting -->
+
 <!--
   <div id="spacebox" class="variable-sizes clearfix isotope">
     <div class="isotope-item">
@@ -47,47 +94,6 @@
     </div>-->
   <!-- </div>spacebox -->
 
-
-  <div class="event-logistics">
-    <div class="col-md-6">
-
-      <h3><%= @party.event_name %></h3>
-      <p>Hosted by <%= @party.host %></p>
-      <p><%= @party.event_description %></p>
-      <p><i class="icon-calendar"></i>      <%= @party.event_date %></p>
-      <p><i class="icon-map-marker"></i>       <%= @party.venue %></p>
-      <p><i class="icon-ok"></i>    <%= @party.hashtag %></p>
-      <h6><%= link_to "Edit Party", edit_party_path(@party) %></h6>
-
-    </div>
-
-    <div class="rsvp">
-      <div class="col-md-6">
-        <h3>RSVP</h3>
-        <%= render partial: 'socialform', locals: {socialview: Socialview.new} %>
-      </div>
-    </div><!-- googlemap -->
-  </div><!-- event-logistics -->
-
-  <div class="col-md-12 hashtag">
-    <h3>Did you attend the event?</h3>
-    <h3>Put in a hashtag to see all the Instagram photos that were taken!</h3>
-
-    <%= render partial: 'socialform', locals: {socialview: Socialview.new} %>
-
-  </div>
-
-  <div class="googlemap">
-    <div class="col-md-6">
-      Google Map
-    </div>
-
-    <div class="col-md-6">
-      Google Map Directions
-    </div>
-  </div>
-
-</div>
 
 
 
