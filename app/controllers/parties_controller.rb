@@ -12,10 +12,11 @@ class PartiesController < ApplicationController
   def create
     @party = Party.create(params[:party])
     if @party.save
-      flash[:notice] = "Party has been created."
+      flash[:notice] = "Woohoo! Your party has been created!"
       redirect_to @party
     else
-      #TBD
+      flash[:alert] = "Whoops, party has not been created."
+      render :action => "new"
     end
   end
 
@@ -28,13 +29,21 @@ class PartiesController < ApplicationController
   end
 
   def update
+    @party = Party.find(params[:id])
     if @party.update_attributes(params[:party])
-        flash[:notice] = "Party has been updated."
-        redirect_to @party
-      else
-        flash[:alert] = "Party has not been updated."
-        render :action => "edit"
-      end
+      flash[:notice] = "Congrats! Your party has been updated."
+      redirect_to @party
+    else
+      flash[:alert] = "Whoops, party has not been updated."
+      render :action => "edit"
+    end
+  end
+
+  def destroy
+    @party = Party.find(params[:id])
+    @party.destroy
+    flash[:notice] = "Awww, Party has been deleted."
+    redirect_to parties_path
   end
 
   def socialview

@@ -2,9 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
+gem 'dynamic_form', '1.1.4'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'pg'
 gem 'sqlite3'
 gem 'formtastic'
@@ -16,6 +17,9 @@ gem 'carrierwave_direct'
 gem 'sidekiq'
 
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+
+gem "tweet-button"
 
 gem 'httparty'
 # Gems used only for assets and not required
@@ -39,6 +43,7 @@ end
 group :test do
   gem 'capybara', '1.1.2'
   gem 'factory_girl', '2.6.4'
+  gem 'webmock'
 end
 
 gem 'jquery-rails'
