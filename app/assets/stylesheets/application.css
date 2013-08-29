@@ -116,13 +116,13 @@ p {
 .hashtag {
   clear: both;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.hashtag h3 {
+.event-details .hashtag h3 {
   font-family: 'Quicksand', sans-serif;
-  font-weight: 400px;
+  font-weight: 300px;
   line-height: 1.2em;
 }
 
@@ -135,6 +135,28 @@ p {
   margin-top: 20px;
 }
 
+
+/* Instagram Results Page */
+
+.insta-results {
+  text-align: center;
+}
+
+.insta-results h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300px;
+  text-align: center;
+  font-size: 56px;
+  margin-bottom: 30px;
+}
+
+.insta-results img {
+  width: 25%;
+  height: 25%;
+}
+
+
+/* Instagram Results Page */
 
 
 

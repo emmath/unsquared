@@ -3,18 +3,19 @@
 <head>
   <title>Unsquared</title>
 
-  <!-- Twitter Bootstrap CSS -->
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
 
   <!-- Font Awesome -->
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+   <!-- Twitter Bootstrap CSS -->
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
   <!-- Header Google Web Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
@@ -24,7 +25,7 @@
 
 
 </head>
-<% body_class = @show_background.present? ? "header-image" : "" %>
+
 <body>
 
   <div>
@@ -35,12 +36,6 @@
       <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
     <% end %>
   </div>
-
-  <% flash.each do |key, value| %>
-    <div class='flash' id='<%= key %>'>
-      <%= value %>
-    </div>
-  <% end %>
 
   <%= yield %>
 
