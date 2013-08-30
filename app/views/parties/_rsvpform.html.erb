@@ -1,12 +1,12 @@
 <%= form_for rsvp do |rsvp| %>
   <p>
-    <%= current_user.name %>
-  </p>
-
-  <p>
     <%= rsvp.label :guests, 'Number of Guests' %>
     <%= rsvp.select :guests, (1..6) %>
+    <%= rsvp.hidden_field :party_id, value: @party.id %>
   </p>
+
+  <h3>A confirmation email will be sent to:</h3>
+  <%= current_user.name %>
 
   <div class="actions">
     <%= rsvp.submit "Count me in!", :class => "btn btn-success btn-md" %>
