@@ -7,3 +7,10 @@
 <p>Party ID with RSVP</p>
 <%= @rsvp.party_id %>
 
+<p>
+  <% @rsvps.each do |rsvp| %>
+    <%= rsvp.user_id %>
+    <%=  %>
+  <% end %>
+</p>
+

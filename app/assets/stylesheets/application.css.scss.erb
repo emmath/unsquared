@@ -14,7 +14,7 @@
  */
 
 
-/* Colour Scheme Two */
+/* Colour Scheme */
 /* Orange: #ff7759; */
 /* Pink: #c74965; */
 /* Purple: #7a387f; */
@@ -24,7 +24,7 @@
 
 /* Fonts */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400px;
 }
@@ -33,6 +33,23 @@ p {
   font-family: 'Droid Serif', serif;
   font-weight: 400;
   font-size: 16px;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+/* Navbar */
+
+.navbar {
+  opacity: .85;
+}
+
+.social-media {
+  float: right;
+  color: #fff;
+  margin-top: 10px;
 }
 
 /* Creating a New Party Form Page */
@@ -78,13 +95,15 @@ p {
 
 
 .event-details .header-image {
-  height: 400px;
-  background-image: url(<%= asset_path 'concert.jpg'%>);
+  height: 550px;
+  background-image: url(<%= asset_path 'weddingreception.jpg'%>);
+  margin-top: -80px;
 }
 
 .event-logistics .col-md-6 {
   height: 350px;
-  padding-left: 50px;
+  padding-left: 150px;
+  padding-top: 50px;
 }
 
 .event-logistics h3 {
@@ -98,11 +117,34 @@ p {
   font-weight: 400;
 }
 
+.event-logistics table {
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.event-logistics .icon {
+  margin-right: 15px;
+  line-height: 1.5em;
+}
+
+
+/* RSVP */
+
+.rsvp .col-md-6 {
+  height: 350px;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
 .rsvp h3 {
   font-family: 'Droid Serif', serif;
   font-weight: 400;
   color: #07b58d;
 }
+
+
+/* Enter in Hashtag */
 
 
 .hashtag {

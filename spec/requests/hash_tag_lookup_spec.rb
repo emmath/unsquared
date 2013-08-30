@@ -11,6 +11,7 @@ describe "HashtagLookup" do
 
   it "show images given hashtag" do
     VCR.use_cassette('hashtag_lookup') do
+      response.should render_template(:partial => 'socialform')
       fill_in "Tag", with: "seattle"
       click_button "Create Socialview"
       page.should have_content("NOW ENTERING HASHTAG VISION")

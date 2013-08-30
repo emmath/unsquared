@@ -3,8 +3,6 @@
 <head>
   <title>Unsquared</title>
 
-
-
   <!-- Font Awesome -->
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -28,30 +26,32 @@
 
 <body>
 
-  <div>
-    <% if current_user %>
-      Signed in as <strong><%= current_user.name %></strong>
-      <%= link_to "Sign out", signout_path, id: "sign_out" %>
-    <% else %>
-      <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-      <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+  <nav class="navbar navbar-inverse right" role="navigation">
+      <div class="social-media">
+        <% if current_user %>
+          Signed in as <%= current_user.name %>
+          <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <% else %>
+          <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+          <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+        <% end %>
+      </div>
+  </nav>
+
+    <% flash.each do |key, value| %>
+      <div class='flash' id='<%= key %>'>
+        <% value %>
+      </div>
     <% end %>
-  </div>
-
-  <% flash.each do |key, value| %>
-    <div class='flash' id='<%= key %>'>
-      <% value %>
-    </div>
-  <% end %>
 
 
-  <%= yield %>
+    <%= yield %>
 
   <script>
   if (window.location.pathname == '/')
   {
     $(document).ready(function() {
-      var images = ['bartable.jpg', 'concert.jpg', 'lightning.jpg', 'pub.jpg', 'reception.jpg', 'weddingreception.jpg'];
+      var images = ['concert.jpg', 'pub.jpg', 'weddingreception.jpg'];
       $('body').css({'background-image': 'url(assets/' + images[Math.floor(Math.random() * images.length)] + ')', 'background-size': 'cover'});
     })
   }

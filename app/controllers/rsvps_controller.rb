@@ -1,5 +1,9 @@
 class RsvpsController < ApplicationController
 
+  def index
+    @rsvps = Rsvp.all
+  end
+
   def new
     @rsvp = Rsvp.new
   end
@@ -16,5 +20,6 @@ class RsvpsController < ApplicationController
 
   def show
     @rsvp = Rsvp.find(params[:id])
+    @rsvps = Rsvp.all
   end
 end

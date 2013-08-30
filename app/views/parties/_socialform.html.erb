@@ -1,6 +1,7 @@
 <%= form_for socialview do |f| %>
   <%= f.error_messages %>
   <p>
+    <% f.label :tag %>
     <%= f.text_field :tag, :placeholder => "#hashtag" %>
   </p>
 
