@@ -1,14 +1,11 @@
-<table>
-  <tr>
-    <th>Party Name</th>
-    <th>Party Photo</th>
-  </tr>
 
-  <% @parties.each do |party| %>
-    <tr>
-      <td><%= link_to party.event_name, party %></td>
-    </tr>
-  <% end %>
-</table>
-
-<%= link_to "New Party", new_party_path %>
+<div class="black-background">
+  <div class="col-md-12">
+      <% @parties.each do |party| %>
+          <h2><%= link_to party.event_name, party %></h2>
+      <% end %>
+  <div class="new-party-link">
+    <h6><%= link_to "New Party", new_party_path %></h6>
+  </div>
+  </div>
+</div>
