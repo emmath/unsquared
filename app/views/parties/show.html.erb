@@ -45,12 +45,10 @@
       <div class="col-md-6">
         <h3>RSVP</h3>
         <%= render partial: 'rsvpform', locals: {rsvp: Rsvp.new} %>
-
         <br />
 
         <h5>Tweetable: <%= @party.event_name %> is going to be AMAZING.</h5>
         <%= tweet_button(:via => "codefellowsorg", :text => "Ask me about the awesome event I just joined!") %>
-
       </div>
     </div><!-- rsvp -->
 
