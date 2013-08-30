@@ -1,16 +1,18 @@
-<h2>RSVP Confirmation</h2>
 
-<p>Number of guests</p>
-<%= @rsvp.guests %>
-<p>User ID with RSVP</p>
-<%= @rsvp.user_id %>
-<p>Party ID with RSVP</p>
-<%= @rsvp.party_id %>
+<div class="rsvp-confirmation">
+  <div class="col-md-4">
+  </div>
 
-<p>
-  <% @rsvps.each do |rsvp| %>
-    <%= rsvp.user_id %>
-    <%=  %>
-  <% end %>
-</p>
+  <div class="col-md-4">
+    <div class="jumbotron">
+      <h2>You are now confirmed</h2>
+      <h2>for a total of <%= @rsvp.guests %> guests</h2>
+      <br />
+      <h4><em>Get snazzy!</em></h4>
+  </div>
+
+  <div class="col-md-4"></div>
+  </div>
+</div>
+
 
