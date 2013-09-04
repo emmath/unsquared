@@ -14,4 +14,8 @@ class Party < ActiveRecord::Base
   def gmaps4rails_address
     "#{self.venue_zipcode}"
   end
+
+  def gmaps4rails_infowindow
+    "#{self.venue_name}"
+  end
 end

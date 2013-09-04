@@ -53,23 +53,17 @@
     </div><!-- rsvp -->
 
 
+
+  <div class="col-md-12 googlemap">
+    <%= gmaps4rails(@json) %>
+  </div>
+
+
   <div class="col-md-12 hashtag">
     <h3>Did you attend the event?</h3>
     <h3>Put in a hashtag to see all the Instagram photos that were taken!</h3>
 
     <%= render partial: 'socialform', locals: {socialview: Socialview.new} %>
-
-  </div>
-
-  <div class="googlemap">
-    <div class="col-md-6">
-      Google Map
-      <%= gmaps4rails(@json) %>
-    </div>
-
-    <div class="col-md-6">
-      Google Map Directions
-    </div>
   </div>
 
 </div>
