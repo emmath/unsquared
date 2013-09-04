@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130829200331) do
+ActiveRecord::Schema.define(:version => 20130904175501) do
 
   create_table "parties", :force => true do |t|
     t.string   "event_name"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(:version => 20130829200331) do
     t.datetime "updated_at",        :null => false
     t.string   "image"
     t.integer  "rsvp_id"
+    t.string   "venue_name"
+    t.string   "venue_street"
+    t.string   "venue_city"
+    t.string   "venue_province"
+    t.string   "venue_zipcode"
+    t.boolean  "gmaps"
+    t.float    "longitude"
+    t.float    "latitude"
   end
 
   create_table "rsvps", :force => true do |t|
