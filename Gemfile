@@ -20,6 +20,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
 gem "tweet-button"
+gem 'gmaps4rails'
 
 gem 'httparty'
 # Gems used only for assets and not required

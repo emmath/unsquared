@@ -21,6 +21,7 @@ class PartiesController < ApplicationController
 
   def show
     @party = Party.find(params[:id])
+    @json = Party.all.to_gmaps4rails
   end
 
   def edit
