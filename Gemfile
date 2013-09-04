@@ -7,7 +7,6 @@ gem 'dynamic_form', '1.1.4'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'pg'
-gem 'sqlite3'
 gem 'formtastic'
 gem 'figaro'
 gem 'rmagick'
