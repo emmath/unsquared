@@ -11,7 +11,7 @@ class Party < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
 
-  def gmapsrails_address
+  def gmaps4rails_address
     "#{self.venue_zipcode}"
   end
 end
