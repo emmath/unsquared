@@ -15,4 +15,3 @@
 //= require jquery.isotope.min
 //= require_tree .
 
-
